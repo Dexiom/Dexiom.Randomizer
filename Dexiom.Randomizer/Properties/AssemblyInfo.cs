@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Dexiom.Randomizer")]
 [assembly: AssemblyDescription("Makes the generation of random stuff easier.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Dexiom")]
 [assembly: AssemblyProduct("Dexiom.Randomizer")]
 [assembly: AssemblyCopyright("© Consultation Dexiom inc.")]
 [assembly: AssemblyTrademark("")]
