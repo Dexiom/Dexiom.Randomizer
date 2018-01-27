@@ -24,7 +24,7 @@ namespace Dexiom.Randomizer.Tests
             //method 3
             int temp;
             var method3 = StringGenerator.CreateRandomString("****", CaracterType.Number);
-            if (int.TryParse(method3, out temp))
+            if (!int.TryParse(method3, out temp))
             {
                 Assert.Fail("Restrictions were not respected");
             }
