@@ -41,7 +41,10 @@ namespace Dexiom.Randomizer
         /// <returns></returns>
         public static string CreateRandomString(string format = "*****-*****-*****-*****", params CaracterType[] caracterTypes)
         {
-            var retVal = format.ToCharArray().Select(c => c == MaskToken ? Randomizer.GetRandomCaracter(CaracterType.UpperCaseLetter, CaracterType.Number) : c);
+            var actualCaracterTypes = caracterTypes.Any()
+                ? caracterTypes
+                : typeof(CaracterType).GetEnumValues().Cast<CaracterType>().ToArray();
+            var retVal = format.ToCharArray().Select(c => c == MaskToken ? Randomizer.GetRandomCaracter(actualCaracterTypes) : c);
             return string.Join(string.Empty, retVal);
         }
     }
